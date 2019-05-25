@@ -14,6 +14,10 @@
 <form method="post" action="register">
     <p>
         Nazwa użytkownika: <input type="text" name = "username" required/>
+        <c:if test="${error != null}">
+            <span style = "color: RED">${error}</span>
+        </c:if>
+
     </p>
     <p>
         Hasło: <input type="password" name = "password" required/>
