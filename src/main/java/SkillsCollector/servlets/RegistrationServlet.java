@@ -45,7 +45,7 @@ public class RegistrationServlet extends HttpServlet {
             userDao.save(user);
             resp.sendRedirect("/login");
         } else {
-            req.setAttribute("error", "Nazwa użytkownika już zajęta");
+            req.setAttribute("error", "Podana nazwa użytkownika jest zajęta");
             req.getRequestDispatcher("/WEB-INF/views/register.jsp").forward(req, resp);
         }
 
